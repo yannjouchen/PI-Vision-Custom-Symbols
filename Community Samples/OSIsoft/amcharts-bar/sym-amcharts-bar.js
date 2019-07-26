@@ -151,7 +151,7 @@
 			return newdata.Rows.map(
                 function(item, index) {
                     return {
-                        Value: parseFloat(item.Value),
+                        Value: parseFloat(item.Value.split(',').join("")),
                         Time: item.Time,
                         StreamName: labels[index].Label,
                         uniqueColor: chartColors[index],
